@@ -5,13 +5,13 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
-nombre:
-apellido:
+nombre: Darian
+apellido: Bellandi
 ---
 Ejercicio: entrada_salida_03
 ---
 Enunciado:
-Al presionar el botón  'Mostrar', se deberá obtener el contenido de la caja de texto para luego 
+Al presionar el botón  'Mostrar', se deberá obtener contenido en la caja de texto y luego 
 mostrarlo utilizando el Dialog Alert
 '''
 
@@ -20,6 +20,7 @@ class App(customtkinter.CTk):
     def __init__(self):
         super().__init__()
 
+        # configure window
         self.title("UTN FRA")
 
         self.label1 = customtkinter.CTkLabel(master=self, text="Nombre")
@@ -34,7 +35,8 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
+        dato_texto = self.txt_nombre.get()
+        alert("Dato obtenido",dato_texto)
                 
     
 if __name__ == "__main__":
